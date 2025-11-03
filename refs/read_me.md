@@ -44,3 +44,23 @@
 - Object.create()
 - 'prototype' Property
 - 'extends' keyword
+
+### JavaScript Engine
+
+- Creational Phase : allocates memory to variables and functions
+- Executional: executes the program
+
+### JavaScript Datatypes
+
+- Primitive: String, Number, Boolean, Symbol
+- Reference: Object, Array, Date, Function
+
+### Principle of Immutability
+
+- Mutable : can change/modify value
+- Immutable: can't modify value
+
+### shallow copy and deep copy
+
+- Shallow Copy: Original Object will change, if we change the cloned object
+- Deep Copy:Original Object does not change, if we change the cloned object
