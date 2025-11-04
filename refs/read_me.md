@@ -48,7 +48,7 @@
 ### JavaScript Engine
 
 - Creational Phase : allocates memory to variables and functions
-- Executional: executes the program
+- Executional Phase : executes the program
 
 ### JavaScript Datatypes
 
@@ -63,4 +63,19 @@
 ### shallow copy and deep copy
 
 - Shallow Copy: Original Object will change, if we change the cloned object
-- Deep Copy:Original Object does not change, if we change the cloned object
+- Deep Copy: Original Object does not change, if we change the cloned object
+
+## ES6+ Features
+
+- Arrow Function
+- Destructuring
+- Block Scope
+- Rest / Spread
+- Template Literals
+- Default Parameter
+
+## Async Behaviour
+
+- Promise
+
+## TypeScript

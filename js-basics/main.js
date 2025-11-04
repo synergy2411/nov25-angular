@@ -254,24 +254,24 @@
 // // - Embed variable into string without (+)
 // // - Multiline string without (\n)
 
-let userName = "Monica Geller";
-let userAge = 22;
+// let userName = "Monica Geller";
+// let userAge = 22;
 
-let greetings = `Hello, This is ${userName}!
-I'm ${userAge} years old!`;
+// let greetings = `Hello, This is ${userName}!
+// I'm ${userAge} years old!`;
 
-console.log(greetings);
+// console.log(greetings);
 
-// // DEFAULT PARAMETER
+// // // DEFAULT PARAMETER
 
-function demoDefaultParameter(arr = []) {
-  //   arr = arr || [];
+// function demoDefaultParameter(arr = []) {
+//   //   arr = arr || [];
 
-  if (arr.length > 2) {
-    console.log("Do some stuff");
-  } else {
-    console.log("Do something else");
-  }
-}
+//   if (arr.length > 2) {
+//     console.log("Do some stuff");
+//   } else {
+//     console.log("Do something else");
+//   }
+// }
 
-demoDefaultParameter([2, 3, 4, 5]);
+// demoDefaultParameter([2, 3, 4, 5]);
