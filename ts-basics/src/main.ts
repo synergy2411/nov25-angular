@@ -164,31 +164,88 @@
 
 // // ABSTRACT CLASSES
 
-abstract class Recipe {
-  abstract collectIngredients(): void;
-  abstract prepareTheDish(): void;
-  abstract cleanUp(): void;
+// abstract class Recipe {
+//   abstract collectIngredients(): void;
+//   abstract prepareTheDish(): void;
+//   abstract cleanUp(): void;
 
-  execute() {
-    this.collectIngredients();
-    this.prepareTheDish();
-    this.cleanUp();
-  }
+//   execute() {
+//     this.collectIngredients();
+//     this.prepareTheDish();
+//     this.cleanUp();
+//   }
+// }
+
+// class Tea extends Recipe {
+//   collectIngredients(): void {
+//     console.log("Ready with Tea leafs, suger, water and milk");
+//   }
+//   prepareTheDish(): void {
+//     console.log("Boil Water");
+//     console.log("Add the ingredients");
+//     console.log("Serve the Tea");
+//   }
+//   cleanUp(): void {
+//     console.log("Clean all utensils");
+//   }
+// }
+
+// let gingerTea = new Tea();
+// gingerTea.execute();
+
+// // METHOD OVERLOADING
+// function add(a: number, b: number): number;
+// function add(a: string, b: string): string;
+// function add(a: any, b: any): any {
+//   if (typeof a === "string" || typeof b === "string") {
+//     return a + " " + b;
+//   } else if (typeof a === "number" || typeof b === "number") {
+//     return a + b;
+//   } else {
+//     return "Unknown Operation";
+//   }
+// }
+
+// const result = add(4, 5);
+// console.log("Sum of numbers - ", result);
+
+// const strResult = add("Hello", "World");
+// console.log("String Concatenation : ", strResult);
+
+// // GENERIC FUNCTION
+function addAtBeginning<T>(item: T, arr: T[]): T[] {
+  return [item, ...arr];
 }
 
-class Tea extends Recipe {
-  collectIngredients(): void {
-    console.log("Ready with Tea leafs, suger, water and milk");
-  }
-  prepareTheDish(): void {
-    console.log("Boil Water");
-    console.log("Add the ingredients");
-    console.log("Serve the Tea");
-  }
-  cleanUp(): void {
-    console.log("Clean all utensils");
-  }
+const allFriends = addAtBeginning<string>("Monica", ["Joey", "Ross", "Rachel"]);
+console.log("Friends Type : ", typeof allFriends[0]);
+
+const allMarks = addAtBeginning<number>(98, [89, 79, 96, 91]);
+console.log("Marks Type : ", typeof allMarks[0]);
+
+// // GENERIC INTERFACES
+interface IResource<T, K> {
+  resourceName: T;
+  resourceLocation: K;
 }
 
-let gingerTea = new Tea();
-gingerTea.execute();
+let ServerOne: IResource<number, string> = {
+  resourceName: 199,
+  resourceLocation: "Pune",
+};
+
+// // GENERIC CLASS
+class List<T> {
+  private list: T[] = [];
+
+  addItem(item: T) {}
+
+  removeItem(index: number): T {}
+
+  getItem(index: number): T {}
+}
+
+let friendsList = new List();
+friendsList.addItem();
+friendsList.removeItem();
+friendsList.getItem();
