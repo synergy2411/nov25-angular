@@ -76,6 +76,15 @@
 
 ## Async Behaviour
 
+- Timers
+- Remote Server Call
+- Read/Write
+- I/O
+- Socket
+- Time consuming Operation
+
+- Callbacks
 - Promise
+- Observable
 
 ## TypeScript
