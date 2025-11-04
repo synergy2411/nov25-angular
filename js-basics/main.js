@@ -275,3 +275,17 @@
 // }
 
 // demoDefaultParameter([2, 3, 4, 5]);
+
+//JavaScript is loosely typed / dynamically typed
+
+let x = "Hello World";
+
+console.log(typeof x); // string
+
+x = 101;
+
+console.log(typeof x); // number
+
+x = true;
+
+console.log(typeof x); // boolean

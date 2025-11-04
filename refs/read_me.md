@@ -87,4 +87,8 @@
 - Promise
 - Observable
 
-## TypeScript
+# TypeScript
+
+## Creating TypeScript Project using Vite
+
+> npm create vite@latest
