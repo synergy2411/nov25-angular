@@ -87,8 +87,46 @@
 - Promise
 - Observable
 
-# TypeScript
+### Promises : placeholder for future value
+
+- Promise Life Cycle : Pending, Settled (fulfilled / rejected)
+- Promise API Methods: all, allSettled, race, any, resolve, reject
+
+# TypeScript : JavaScript with type syntax
+
+- Code safety
+- Better tooling
+- Readable
+- Better intellisense
+
+## Various Types in TypeScript
+
+- All JavaScript Data-Types including both Primitive as well Reference
+- unknown, any, tuple, null, undefined, never enums etc
 
 ## Creating TypeScript Project using Vite
 
 > npm create vite@latest
+
+## OOPS Concepts
+
+## Generics: placeholder for datatypes to achieve reusability
+
+## Decorators
+
+- Class: @Component({}), @Directive({}), @Injectable({})
+- Property : @Input(), @Output()
+- Method : @HostListener()
+- Parameter: @skip(), @optional()
+
+## Module System
+
+# ANGULAR
+
+## Building blocks
+
+- Components : @Component({})
+- Directives : @Directive({})
+- Pipes: @Pipe({})
+- Services: @Injectable({})
+- Modules: @NgModule({})

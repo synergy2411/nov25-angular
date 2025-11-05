@@ -213,39 +213,95 @@
 // console.log("String Concatenation : ", strResult);
 
 // // GENERIC FUNCTION
-function addAtBeginning<T>(item: T, arr: T[]): T[] {
-  return [item, ...arr];
-}
+// function addAtBeginning<T>(item: T, arr: T[]): T[] {
+//   return [item, ...arr];
+// }
 
-const allFriends = addAtBeginning<string>("Monica", ["Joey", "Ross", "Rachel"]);
-console.log("Friends Type : ", typeof allFriends[0]);
+// const allFriends = addAtBeginning<string>("Monica", ["Joey", "Ross", "Rachel"]);
+// console.log("Friends Type : ", typeof allFriends[0]);
 
-const allMarks = addAtBeginning<number>(98, [89, 79, 96, 91]);
-console.log("Marks Type : ", typeof allMarks[0]);
+// const allMarks = addAtBeginning<number>(98, [89, 79, 96, 91]);
+// console.log("Marks Type : ", typeof allMarks[0]);
 
-// // GENERIC INTERFACES
-interface IResource<T, K> {
-  resourceName: T;
-  resourceLocation: K;
-}
+// // // GENERIC INTERFACES
+// interface IResource<T, K> {
+//   resourceName: T;
+//   resourceLocation: K;
+// }
 
-let ServerOne: IResource<number, string> = {
-  resourceName: 199,
-  resourceLocation: "Pune",
-};
+// let ServerOne: IResource<number, string> = {
+//   resourceName: 199,
+//   resourceLocation: "Pune",
+// };
 
-// // GENERIC CLASS
-class List<T> {
-  private list: T[] = [];
+// // // GENERIC CLASS
+// class List<T> {
+//   private list: T[] = [];
 
-  addItem(item: T) {}
+//   addItem(item: T) {
+//     this.list.push(item);
+//   }
 
-  removeItem(index: number): T {}
+//   removeItem(index: number): T {
+//     const [deletedItem] = this.list.splice(index, 1);
+//     return deletedItem;
+//   }
 
-  getItem(index: number): T {}
-}
+//   getItem(index: number): T {
+//     const [fetchedItem] = this.list.splice(index, 1);
+//     return fetchedItem;
+//   }
+//   getAllItems(): T[] {
+//     return this.list;
+//   }
+// }
 
-let friendsList = new List();
-friendsList.addItem();
-friendsList.removeItem();
-friendsList.getItem();
+// let friendsList = new List<string>();
+// friendsList.addItem("Monica");
+// friendsList.addItem("Joey");
+// friendsList.addItem("Chandler");
+// console.log(friendsList.getAllItems());
+
+// friendsList.removeItem(1);
+// console.log(friendsList.getAllItems());
+
+// console.log("Index 1 element : ", friendsList.getItem(1));
+
+// GENERIC CONSTRAINTS
+
+// function getLength<T extends { length: number }>(args: T) {
+//   return args.length;
+// }
+
+// interface IBox {
+//   width: number;
+//   height: number;
+//   length: number;
+// }
+
+// let box: IBox = {
+//   width: 6,
+//   height: 8,
+//   length: 10,
+// };
+
+// const boxLength = getLength<IBox>(box);
+// console.log("Box Length : ", boxLength);
+
+// named import
+import getQuote, { getLuckyNumber, getDailyRoutine } from "./utils/fortune";
+import Student from "./utils/student";
+
+import "bootstrap/dist/css/bootstrap.min.css";
+
+// default import
+// import getQuote from "./utils/fortune";
+
+console.log("Your lucky number today : ", getLuckyNumber());
+
+console.log("You daily routine : ", getDailyRoutine());
+
+console.log("Quote for the day : ", getQuote());
+
+let studentOne = new Student("S001", "Monica Geller");
+console.log("Student Details : ", studentOne.getDetails());
