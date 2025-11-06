@@ -20,4 +20,8 @@ export class UsersComponent {
   onMoreInfo(userLastName: string, userCompany: string) {
     alert(`Mr. ${userLastName.toUpperCase()} is working with ${userCompany}!`);
   }
+
+  onChange(votes: string) {
+    this.user.votes = +votes;
+  }
 }

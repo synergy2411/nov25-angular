@@ -2,30 +2,10 @@
   <li class="list-group-item">
     <div class="row">
       <div class="col-4">
-        <img
-          [src]="user.avatar"
-          [alt]="user.firstName"
-          class="img-fluid rounded-circle"
-        />
-
-        <div class="d-grid m-3">
-          <button
-            class="btn btn-info"
-            (click)="onMoreInfo(user.lastName, user.company)"
-          >
-            More Info
-          </button>
-        </div>
+        <app-user-img [user]="user"></app-user-img>
       </div>
       <div class="col-8">
-        <h2>{{ user.firstName }} {{ user.lastName }}</h2>
-        <p>Date of Birth : <span [innerHTML]="user.dob"></span></p>
-        <p>Income : <span [innerHTML]="user.income"></span></p>
-        <p>
-          Total Votes : {{ user.votes }}
-
-          <input type="number" [value]="user.votes" />
-        </p>
+        <app-user-info [user]="user"></app-user-info>
       </div>
     </div>
   </li>
