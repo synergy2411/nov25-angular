@@ -1,0 +1,14 @@
+<h1>Directive Demo Component</h1>
+
+<p
+  [ngStyle]="styles"
+  (mouseenter)="onStyleChange(true)"
+  (mouseleave)="onStyleChange(false)"
+>
+  This paragraph will display the ngStyle demo
+</p>
+
+<button class="btn btn-primary" (click)="onClassChange()">
+  Change CSS Classes
+</button>
+<p [ngClass]="classes">This paragraph will display the ngClass demo</p>
