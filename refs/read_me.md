@@ -198,9 +198,19 @@
 - ng generate help
 
 - ng g c components/users
+- ng g c components/users/user-img
+- ng g c components/users/user-info
 
 ### Adding Bootstrap Package
 
 > npm install bootstrap
 > update angular.json build>options>style -> "./node_modules/bootstrap/dist/css/bootstrap.min.css",
 > restart the server
+
+## Building blocks
+
+- Components: create the reusable UI
+- Directives : DOM Manipulation
+- Pipes: Format the data on UI
+- Services: Business logic (state management, XHR, logic)
+- Modules: Modular the app, Encapsulation

@@ -15,10 +15,13 @@ export class UsersComponent {
     isWorking: true,
     avatar: './assets/images/bill.jpeg',
     votes: 120,
+    prop: 'some value',
   };
 
-  onMoreInfo(userLastName: string, userCompany: string) {
-    alert(`Mr. ${userLastName.toUpperCase()} is working with ${userCompany}!`);
+  onMoreInfo(person: any) {
+    alert(
+      `Mr. ${person.lastName.toUpperCase()} is working with ${person.company}!`
+    );
   }
 
   onChange(votes: string) {
