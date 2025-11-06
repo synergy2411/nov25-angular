@@ -1,5 +1,63 @@
 <h1>Directive Demo Component</h1>
 
+<hr />
+<h2>Structural Directives</h2>
+<hr />
+
+<table class="table table-stripped table-bordered mb-4">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Label</th>
+      <th>Status</th>
+      <th>Even</th>
+      <th>Odd</th>
+      <th>is First?</th>
+      <th>is Last?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- @for (todo of todos; track $index) {
+
+    } -->
+
+    <tr
+      *ngFor="
+        let todo of todos;
+        index as i;
+        even as isEven;
+        odd as isOdd;
+        first as isFirst;
+        last as isLast
+      "
+      [ngClass]="{ 'my-border': isLast }"
+    >
+      <td>{{ i + 1 }}</td>
+      <td>{{ todo.label.toUpperCase() }}</td>
+      <!-- <td><p *ngIf="todo.status; else pending">Completed</p></td> -->
+      <td>
+        @if (todo.status) {
+        <p>Completed</p>
+        } @else {
+        <p>Pending</p>
+        }
+      </td>
+      <td>{{ isEven }}</td>
+      <td>{{ isOdd }}</td>
+      <td>{{ isFirst }}</td>
+      <td>{{ isLast }}</td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- <ng-template #pending>
+  <p>Pending</p>
+</ng-template> -->
+
+<hr />
+<h2>Attribute Directives</h2>
+<hr />
+
 <p
   [ngStyle]="styles"
   (mouseenter)="onStyleChange(true)"

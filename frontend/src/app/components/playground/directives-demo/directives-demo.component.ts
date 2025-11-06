@@ -6,6 +6,13 @@ import { Component } from '@angular/core';
   styleUrl: './directives-demo.component.css',
 })
 export class DirectivesDemoComponent {
+  todos = [
+    { label: 'planting', status: false },
+    { label: 'shopping', status: true },
+    { label: 'insurance', status: true },
+    { label: 'grocery', status: false },
+  ];
+
   styles = { color: 'blue', backgroundColor: 'yellow', fontWeight: 500 };
 
   // classes = ['my-feature', 'my-border'];
