@@ -8,7 +8,11 @@
         ></app-user-img>
       </div>
       <div class="col-8">
-        <app-user-info [user]="user"></app-user-info>
+        <app-user-info [user]="user">
+          <header>Some Header info</header>
+          <main>Main section</main>
+          <footer>Some footer info</footer>
+        </app-user-info>
       </div>
     </div>
   </li>
