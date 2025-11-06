@@ -7,7 +7,17 @@ import { Component } from '@angular/core';
 })
 export class UsersComponent {
   user = {
-    name: 'bill gates',
+    firstName: 'bill',
+    lastName: 'gates',
     company: 'Microsoft Inc',
+    dob: new Date('Dec 12, 1965'),
+    income: 50000,
+    isWorking: true,
+    avatar: './assets/images/bill.jpeg',
+    votes: 120,
   };
+
+  onMoreInfo(userLastName: string, userCompany: string) {
+    alert(`Mr. ${userLastName.toUpperCase()} is working with ${userCompany}!`);
+  }
 }

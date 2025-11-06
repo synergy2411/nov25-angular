@@ -121,6 +121,9 @@
 
 ## Module System
 
+- import statement
+- export keyword
+
 # ANGULAR
 
 ## Building blocks
@@ -195,3 +198,9 @@
 - ng generate help
 
 - ng g c components/users
+
+### Adding Bootstrap Package
+
+> npm install bootstrap
+> update angular.json build>options>style -> "./node_modules/bootstrap/dist/css/bootstrap.min.css",
+> restart the server

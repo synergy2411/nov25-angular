@@ -1,5 +1,32 @@
-<h2>Users Component Loaded....</h2>
+<ul class="list-group">
+  <li class="list-group-item">
+    <div class="row">
+      <div class="col-4">
+        <img
+          [src]="user.avatar"
+          [alt]="user.firstName"
+          class="img-fluid rounded-circle"
+        />
 
-<p>Username : {{ user.name }}</p>
+        <div class="d-grid m-3">
+          <button
+            class="btn btn-info"
+            (click)="onMoreInfo(user.lastName, user.company)"
+          >
+            More Info
+          </button>
+        </div>
+      </div>
+      <div class="col-8">
+        <h2>{{ user.firstName }} {{ user.lastName }}</h2>
+        <p>Date of Birth : <span [innerHTML]="user.dob"></span></p>
+        <p>Income : <span [innerHTML]="user.income"></span></p>
+        <p>
+          Total Votes : {{ user.votes }}
 
-<p>Company : <span [innerHTML]="user.company"></span></p>
+          <input type="number" [value]="user.votes" />
+        </p>
+      </div>
+    </div>
+  </li>
+</ul>
