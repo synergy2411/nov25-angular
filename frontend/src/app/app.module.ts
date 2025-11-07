@@ -13,6 +13,7 @@ import { PipeDemoComponent } from './components/playground/pipe-demo/pipe-demo.c
 import { CountryCodePipe } from './pipes/country-code.pipe';
 import { ReversePipe } from './pipes/reverse.pipe';
 import { FilterPipe } from './pipes/filter.pipe';
+import { SortPipe } from './pipes/sort.pipe';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { FilterPipe } from './pipes/filter.pipe';
     CountryCodePipe,
     ReversePipe,
     FilterPipe,
+    SortPipe,
   ],
   imports: [
     // Imports module functionality

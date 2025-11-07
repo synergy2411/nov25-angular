@@ -263,6 +263,8 @@
 
 - ng g p pipes/country-code
 
+## Custom Sorting functionality
+
 ### Pure Pipes
 
 friends = ["Joey", "Monica", "Ross"]

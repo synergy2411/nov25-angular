@@ -26,7 +26,9 @@
 <ul class="list-group">
   <li
     class="list-group-item mb-2"
-    *ngFor="let todo of todoCollection | filter : filteredStatus"
+    *ngFor="
+      let todo of todoCollection | filter : filteredStatus | sort : 'desc'
+    "
   >
     <p>
       {{ todo.label | titlecase }}

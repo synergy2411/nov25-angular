@@ -29,10 +29,10 @@ export class PipeDemoComponent {
   });
 
   onAddTodo() {
-    this.todoCollection.push({ label: 'New Todo', status: 'pending' });
-    // this.todoCollection = [
-    //   { label: 'New Item', status: 'pending' },
-    //   ...this.todoCollection,
-    // ];
+    // this.todoCollection.push({ label: 'New Todo', status: 'pending' });
+    this.todoCollection = [
+      { label: 'New Item', status: 'pending' },
+      ...this.todoCollection,
+    ];
   }
 }
