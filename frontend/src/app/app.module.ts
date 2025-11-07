@@ -10,6 +10,7 @@ import { LifeCycleComponent } from './components/playground/life-cycle/life-cycl
 import { DirectivesDemoComponent } from './components/playground/directives-demo/directives-demo.component';
 import { BetterHighlightDirective } from './directives/better-highlight.directive';
 import { PipeDemoComponent } from './components/playground/pipe-demo/pipe-demo.component';
+import { CountryCodePipe } from './pipes/country-code.pipe';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { PipeDemoComponent } from './components/playground/pipe-demo/pipe-demo.c
     DirectivesDemoComponent,
     BetterHighlightDirective,
     PipeDemoComponent,
+    CountryCodePipe,
   ],
   imports: [
     // Imports module functionality

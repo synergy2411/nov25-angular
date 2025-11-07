@@ -1,6 +1,13 @@
 <h1>Pipe Demo Component</h1>
 
-<p>Uppercase Pipe : {{ product.title | titlecase | uppercase }}</p>
+<h2>Custom Pipe</h2>
+
+<p>Contact Number : {{ product.contactNumber | countryCode : "USA" }}</p>
+
+<hr />
+<h2>Built-in Pipes</h2>
+
+<p>Uppercase Pipe : {{ product.title | titlecase | uppercase | lowercase }}</p>
 
 <p>Date Pipe : {{ product.launchDate | date : "MMM dd, yyyy" }}</p>
 

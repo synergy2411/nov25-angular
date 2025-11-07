@@ -12,6 +12,7 @@ export class PipeDemoComponent {
     launchDate: new Date('Sept 10, 2025'),
     marketValue: 0.9,
     avgSale: 12345.6789,
+    contactNumber: 9876543210,
   };
 
   promise = new Promise((resolve) => {

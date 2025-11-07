@@ -258,3 +258,7 @@
   > @HostListener()
   > ElementRef : access of DOM element reference
   > Renderer2 : to manipulate DOM element
+
+## Pipes
+
+- ng g p pipes/country-code
