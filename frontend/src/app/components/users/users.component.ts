@@ -8,10 +8,10 @@ import { USER_DATA } from '../../model/mock';
   styleUrl: './users.component.css',
 })
 export class UsersComponent implements OnInit {
-  user!: IUser;
+  users!: IUser[];
 
   ngOnInit(): void {
-    this.user = USER_DATA;
+    this.users = USER_DATA;
   }
 
   onMoreInfo(person: IUser) {
@@ -21,6 +21,6 @@ export class UsersComponent implements OnInit {
   }
 
   onChange(votes: string) {
-    this.user.votes = +votes;
+    // this.user.votes = +votes;
   }
 }

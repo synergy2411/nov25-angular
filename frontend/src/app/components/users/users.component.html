@@ -1,5 +1,9 @@
 <ul class="list-group">
-  <li class="list-group-item">
+  <li
+    class="list-group-item mb-4"
+    *ngFor="let user of users; first as isFirst; odd as isOdd"
+    [ngClass]="{ highlight: isOdd }"
+  >
     <div class="row">
       <div class="col-4">
         <app-user-img
@@ -9,9 +13,9 @@
       </div>
       <div class="col-8">
         <app-user-info [user]="user">
-          <header>Some Header info</header>
+          <!-- <header>Some Header info</header>
           <main>Main section</main>
-          <footer>Some footer info</footer>
+          <footer>Some footer info</footer> -->
         </app-user-info>
       </div>
     </div>
