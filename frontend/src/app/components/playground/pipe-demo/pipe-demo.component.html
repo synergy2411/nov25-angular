@@ -1,0 +1,15 @@
+<h1>Pipe Demo Component</h1>
+
+<p>Uppercase Pipe : {{ product.title | titlecase | uppercase }}</p>
+
+<p>Date Pipe : {{ product.launchDate | date : "MMM dd, yyyy" }}</p>
+
+<p>Current Pipe: {{ product.price | currency : "INR" }}</p>
+
+<p>Percent Pipe : {{ product.marketValue | percent }}</p>
+
+<p>JSON Pipe : {{ product | json }}</p>
+
+<p>Number Pipe : {{ product.avgSale | number : "5.1-2" }}</p>
+
+<p>Async Pipe : {{ promise | async }}</p>

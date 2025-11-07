@@ -254,3 +254,7 @@
   > \*ngSwitch
 - Custom Directive
   > ng g d directives/better-highlight
+  > @HostBinding()
+  > @HostListener()
+  > ElementRef : access of DOM element reference
+  > Renderer2 : to manipulate DOM element
