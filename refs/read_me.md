@@ -204,7 +204,7 @@
 ### Adding Bootstrap Package
 
 > npm install bootstrap
-> update angular.json build>options>style -> "./node_modules/bootstrap/dist/css/bootstrap.min.css",
+> update angular.json build>options>style -> "./node_modules/bootstrap/dist/css/bootstrap.min.css"
 > restart the server
 
 ## Building blocks
@@ -214,3 +214,41 @@
 - Pipes: Format the data on UI
 - Services: Business logic (state management, XHR, logic)
 - Modules: Modular the app, Encapsulation
+
+## Components : Resuable peice of code; creates UI
+
+- Data Binding
+
+  > Property Binding
+  > Event Binding
+  > Two way data binding -> [(ngModel)]
+
+- Nested Component Communication
+
+  > Parent to Child -> Property Binding + @Input()
+  > Child to Parent -> EventEmitter + @Output() + Event Binding
+
+- Content Projection
+
+  > ng-content
+
+- Component Life Cycle
+  > ngOnChanges
+  > ngOnInit
+  > ngDoCheck
+  > ngAfterContentInit
+  > ngAfterContentChecked
+  > ngAfterViewInit
+  > ngAfterViewChecked
+  > ngOnDestroy
+
+## Directives: marker on UI
+
+- Component Directuve: selector with template
+- Attribute Directive: only apply to appearence to the DOM element
+  > ngStyle
+  > ngClass
+- Structural Directive: affects the template
+  > *ngIf
+  > *ngFor
+  > \*ngSwitch

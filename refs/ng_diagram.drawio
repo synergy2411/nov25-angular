@@ -52,7 +52,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="brRsoaLJlmOL6nNsrL-k" name="Data_Binding">
+  <diagram id="brRsoaLJlmOL6nNsrL-k" name="data_binding">
     <mxGraphModel dx="642" dy="362" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
@@ -100,7 +100,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="TgM_0evd10KZiZlV2X9t" name="Page-3">
+  <diagram id="TgM_0evd10KZiZlV2X9t" name="nested_comp_comm">
     <mxGraphModel dx="667" dy="376" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
@@ -130,10 +130,10 @@
           <mxGeometry x="260" y="375" width="60" height="30" as="geometry" />
         </mxCell>
         <mxCell id="MFfrMECPOttgUPrzC0fp-9" value="( Event Binding )" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="500" y="160" width="110" height="30" as="geometry" />
+          <mxGeometry x="505" y="160" width="110" height="30" as="geometry" />
         </mxCell>
         <mxCell id="MFfrMECPOttgUPrzC0fp-10" value="EventEmitter Class" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="500" y="370" width="170" height="30" as="geometry" />
+          <mxGeometry x="485" y="375" width="170" height="30" as="geometry" />
         </mxCell>
         <mxCell id="MFfrMECPOttgUPrzC0fp-11" value="@Output()" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="530" y="390" width="60" height="30" as="geometry" />

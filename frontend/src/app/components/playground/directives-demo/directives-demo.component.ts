@@ -6,6 +6,8 @@ import { Component } from '@angular/core';
   styleUrl: './directives-demo.component.css',
 })
 export class DirectivesDemoComponent {
+  tab = 0;
+
   todos = [
     { label: 'planting', status: false },
     { label: 'shopping', status: true },
