@@ -252,3 +252,5 @@
   > *ngIf
   > *ngFor
   > \*ngSwitch
+- Custom Directive
+  > ng g d directives/better-highlight

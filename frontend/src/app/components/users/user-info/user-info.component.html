@@ -1,7 +1,11 @@
 <ng-content select="header"></ng-content>
-<h2>{{ user.firstName }} {{ user.lastName }}</h2>
+<h2 appBetterHighlight>{{ user.firstName }} {{ user.lastName }}</h2>
 <p>Date of Birth : <span [innerHTML]="user.dob"></span></p>
+@if (user.isWorking) {
 <p>Income : <span [innerHTML]="user.income"></span></p>
+}@else {
+<p>Mr. {{ user.firstName.toUpperCase() }} is not working anymore!</p>
+}
 <ng-content></ng-content>
 
 <p>
