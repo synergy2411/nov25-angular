@@ -262,3 +262,10 @@
 ## Pipes
 
 - ng g p pipes/country-code
+
+### Pure Pipes
+
+friends = ["Joey", "Monica", "Ross"]
+friends.push("Chandler"); // Impure Change
+
+friends = ["Joey", "Monica", "Ross", "Chandler"] // Pure Change

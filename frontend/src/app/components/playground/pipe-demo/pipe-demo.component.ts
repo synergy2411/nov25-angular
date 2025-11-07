@@ -27,4 +27,12 @@ export class PipeDemoComponent {
   promise = new Promise((resolve) => {
     setTimeout(() => resolve('Promise Resolved'), 2000);
   });
+
+  onAddTodo() {
+    this.todoCollection.push({ label: 'New Todo', status: 'pending' });
+    // this.todoCollection = [
+    //   { label: 'New Item', status: 'pending' },
+    //   ...this.todoCollection,
+    // ];
+  }
 }
