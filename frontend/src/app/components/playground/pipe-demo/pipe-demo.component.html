@@ -4,6 +4,30 @@
 
 <p>Contact Number : {{ product.contactNumber | countryCode : "USA" }}</p>
 
+<p>Reverse Custom Pipe : {{ product.title | reverse }}</p>
+
+<div class="row mb-4">
+  <div class="col">
+    <select class="form-control" [(ngModel)]="filteredStatus">
+      <option value="">Select Option</option>
+      <option value="pending">Pending</option>
+      <option value="completed">Completed</option>
+    </select>
+  </div>
+</div>
+
+<ul class="list-group">
+  <li
+    class="list-group-item mb-2"
+    *ngFor="let todo of todoCollection | filter : filteredStatus"
+  >
+    <p>
+      {{ todo.label | titlecase }}
+      <span class="float-end">{{ todo.status | uppercase }}</span>
+    </p>
+  </li>
+</ul>
+
 <hr />
 <h2>Built-in Pipes</h2>
 

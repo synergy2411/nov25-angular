@@ -15,6 +15,15 @@ export class PipeDemoComponent {
     contactNumber: 9876543210,
   };
 
+  todoCollection = [
+    { label: 'planting', status: 'pending' },
+    { label: 'grocery', status: 'completed' },
+    { label: 'shopping', status: 'pending' },
+    { label: 'insurance', status: 'completed' },
+  ];
+
+  filteredStatus = '';
+
   promise = new Promise((resolve) => {
     setTimeout(() => resolve('Promise Resolved'), 2000);
   });
