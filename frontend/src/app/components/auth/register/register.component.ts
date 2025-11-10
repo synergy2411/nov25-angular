@@ -19,6 +19,8 @@ export class RegisterComponent {
 
   username = new FormControl('', [Validators.required, Validators.email]);
 
+  countries = ['india', 'australia', 'usa', 'singapore'];
+
   constructor(private fb: FormBuilder) {
     this.registerForm = this.fb.group(
       {
@@ -30,6 +32,7 @@ export class RegisterComponent {
         ]),
         cnfPassword: new FormControl('', Validators.required),
         hobbies: new FormArray([]),
+        country: new FormControl(),
       },
       {
         validators: RegisterComponent.passwordMatchValidator,

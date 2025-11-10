@@ -69,6 +69,21 @@
         </div>
       </div>
 
+      <div class="mb-3">
+        <label for="" class="form-label">Countries</label>
+        <select
+          class="form-select form-select-lg"
+          name=""
+          id=""
+          formControlName="country"
+        >
+          <option selected>Select one</option>
+          <option *ngFor="let country of countries" [value]="country">
+            {{ country | titlecase }}
+          </option>
+        </select>
+      </div>
+
       <!-- hobbies -->
       <div class="mb-4">
         <button type="button" class="btn btn-primary" (click)="addNewHobby()">
