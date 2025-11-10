@@ -1,5 +1,10 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
+import {
+  FormBuilder,
+  FormControl,
+  FormGroup,
+  Validators,
+} from '@angular/forms';
 
 @Component({
   selector: 'app-register',
@@ -11,9 +16,21 @@ export class RegisterComponent {
 
   constructor(private fb: FormBuilder) {
     this.registerForm = this.fb.group({
-      username: new FormControl(),
-      password: new FormControl(),
+      username: new FormControl('', [Validators.required, Validators.email]),
+      password: new FormControl('', [
+        Validators.required,
+        Validators.minLength(6),
+      ]),
     });
+
+    // this.registerForm.patchValue({
+    //   username: 'test@test.com',
+    //   password: 'test987',
+    // });
+  }
+
+  get username() {
+    return this.registerForm.get('username') as FormControl;
   }
 
   onSubmit() {
