@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import {
   AbstractControl,
+  FormArray,
   FormBuilder,
   FormControl,
   FormGroup,
@@ -26,6 +27,7 @@ export class RegisterComponent {
           RegisterComponent.exclamationMarkValidator,
         ]),
         cnfPassword: new FormControl('', Validators.required),
+        hobbies: new FormArray([]),
       },
       {
         validators: RegisterComponent.passwordMatchValidator,
@@ -50,10 +52,29 @@ export class RegisterComponent {
     return this.registerForm.get('cnfPassword') as FormControl;
   }
 
+  get hobbies() {
+    return this.registerForm.get('hobbies') as FormArray;
+  }
+
+  addNewHobby() {
+    this.hobbies.push(
+      new FormGroup({
+        name: new FormControl(),
+        frequency: new FormControl(),
+      })
+    );
+  }
+
+  removeHobby(index: number) {
+    this.hobbies.removeAt(index);
+  }
+
   onSubmit() {
     const { username, password } = this.registerForm.value;
-    console.log('USername : ', username);
-    console.log('Password : ', password);
+    // console.log('Username : ', username);
+    // console.log('Password : ', password);
+
+    console.log(this.registerForm.value);
   }
 
   // CUSTOM VALIDATOR
