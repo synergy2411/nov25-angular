@@ -17,10 +17,12 @@ import {
 export class RegisterComponent {
   registerForm!: FormGroup;
 
+  username = new FormControl('', [Validators.required, Validators.email]);
+
   constructor(private fb: FormBuilder) {
     this.registerForm = this.fb.group(
       {
-        username: new FormControl('', [Validators.required, Validators.email]),
+        username: this.username,
         password: new FormControl('', [
           Validators.required,
           Validators.minLength(6),
@@ -40,9 +42,9 @@ export class RegisterComponent {
     // });
   }
 
-  get username() {
-    return this.registerForm.get('username') as FormControl;
-  }
+  // get username() {
+  //   return this.registerForm.get('username') as FormControl;
+  // }
 
   get password() {
     return this.registerForm.get('password') as FormControl;
