@@ -283,9 +283,26 @@ friends = ["Joey", "Monica", "Ross", "Chandler"] // Pure Change
   > visual feedback
 
 - Reactive form / Model driven form
+  > FormControl, FormGroup, FormBuilder, FormArray
+  > Validators / Custom Validator Functions
+  > Error Messages
+  > Validation are imposed on Class Model
 
 ### Classes and State attached to Forms / Forms elements
 
 - Touched / Untouched
 - Pristine / Dirty
 - Valid / Invalid
+
+---
+
+# Services
+
+> ng g s services/user
+
+## Service Registration (Creation the Injectable Token)
+
+- Self-registration (root) : Singleton effect - application-wide
+- Providers Array in Root Module : Singleton effect - application-wide including other services
+- Providers Array in Root Component : Singleton effect - Self component and all the components but not in other services
+- Providers Array in Other Component : Singleton effect - Self component and only the child components

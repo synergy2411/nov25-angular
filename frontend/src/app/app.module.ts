@@ -16,6 +16,9 @@ import { FilterPipe } from './pipes/filter.pipe';
 import { SortPipe } from './pipes/sort.pipe';
 import { LoginComponent } from './components/auth/login/login.component';
 import { RegisterComponent } from './components/auth/register/register.component';
+import { UserService } from './services/user.service';
+import { CounterAComponent } from './components/playground/counter-a/counter-a.component';
+import { CounterBComponent } from './components/playground/counter-b/counter-b.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +37,8 @@ import { RegisterComponent } from './components/auth/register/register.component
     SortPipe,
     LoginComponent,
     RegisterComponent,
+    CounterAComponent,
+    CounterBComponent,
   ],
   imports: [
     // Imports module functionality
@@ -41,7 +46,7 @@ import { RegisterComponent } from './components/auth/register/register.component
     FormsModule,
     ReactiveFormsModule,
   ],
-  providers: [], // Creates tokens and register the Services
+  providers: [UserService], // Creates tokens and register the Services
   bootstrap: [AppComponent],
 })
 export class AppModule {}
