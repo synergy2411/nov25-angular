@@ -1,8 +1,10 @@
 import { Component } from '@angular/core';
 import {
+  AbstractControl,
   FormBuilder,
   FormControl,
   FormGroup,
+  ValidationErrors,
   Validators,
 } from '@angular/forms';
 
@@ -20,7 +22,9 @@ export class RegisterComponent {
       password: new FormControl('', [
         Validators.required,
         Validators.minLength(6),
+        RegisterComponent.exclamationMarkValidator,
       ]),
+      cnfPassword: new FormControl(''),
     });
 
     // this.registerForm.patchValue({
@@ -33,9 +37,25 @@ export class RegisterComponent {
     return this.registerForm.get('username') as FormControl;
   }
 
+  get password() {
+    return this.registerForm.get('password') as FormControl;
+  }
+
+  get cnfPassword() {
+    return this.registerForm.get('cnfPAssword') as FormControl;
+  }
+
   onSubmit() {
     const { username, password } = this.registerForm.value;
     console.log('USername : ', username);
     console.log('Password : ', password);
+  }
+
+  // CUSTOM VALIDATOR
+  static exclamationMarkValidator(
+    control: AbstractControl
+  ): ValidationErrors | null {
+    const hasExclamation = control.value.indexOf('!') >= 0;
+    return hasExclamation ? null : { exclamation: true };
   }
 }

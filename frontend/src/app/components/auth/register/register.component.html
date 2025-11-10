@@ -27,7 +27,7 @@
       <!-- password -->
       <div class="form-floating mb-3">
         <input
-          type="password"
+          type="text"
           class="form-control"
           name="password"
           id="password"
@@ -35,6 +35,30 @@
           formControlName="password"
         />
         <label for="password">Password</label>
+        <!-- Error Messages -->
+        <div *ngIf="password.invalid && (password.touched || password.dirty)">
+          <div *ngIf="password.hasError('required')">
+            <p class="alert alert-danger">Password field is mandatory</p>
+          </div>
+          <div *ngIf="password.hasError('minlength')">
+            <p class="alert alert-danger">Should have at least 6 character</p>
+          </div>
+          <div *ngIf="password.hasError('exclamation')">
+            <p class="alert alert-danger">Should have exclamation sign (!)</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Confirm Password -->
+      <div class="form-floating mb-3">
+        <input
+          type="text"
+          class="form-control"
+          name="cnfPassword"
+          id="cnfPassword"
+          placeholder=""
+        />
+        <label for="cnfPassword">Confirm Password</label>
       </div>
 
       <!-- buttons -->
