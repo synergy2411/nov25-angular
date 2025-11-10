@@ -271,3 +271,21 @@ friends = ["Joey", "Monica", "Ross"]
 friends.push("Chandler"); // Impure Change
 
 friends = ["Joey", "Monica", "Ross", "Chandler"] // Pure Change
+
+## Forms
+
+- Template driven form:
+
+  > 'ngForm'
+  > App logic inside teample
+  > HTML5 Validations (eg. required, email, minlength, pattern etc)
+  > Disabling submit button
+  > visual feedback
+
+- Reactive form / Model driven form
+
+### Classes and State attached to Forms / Forms elements
+
+- Touched / Untouched
+- Pristine / Dirty
+- Valid / Invalid

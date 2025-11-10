@@ -15,6 +15,7 @@ import { ReversePipe } from './pipes/reverse.pipe';
 import { FilterPipe } from './pipes/filter.pipe';
 import { SortPipe } from './pipes/sort.pipe';
 import { LoginComponent } from './components/auth/login/login.component';
+import { RegisterComponent } from './components/auth/register/register.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { LoginComponent } from './components/auth/login/login.component';
     FilterPipe,
     SortPipe,
     LoginComponent,
+    RegisterComponent,
   ],
   imports: [
     // Imports module functionality
