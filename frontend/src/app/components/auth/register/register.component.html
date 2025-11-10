@@ -57,8 +57,16 @@
           name="cnfPassword"
           id="cnfPassword"
           placeholder=""
+          formControlName="cnfPassword"
         />
         <label for="cnfPassword">Confirm Password</label>
+        <!-- Error Message -->
+
+        <div *ngIf="cnfPassword?.dirty">
+          <div *ngIf="registerForm.errors?.['mismatched']">
+            <p class="alert alert-danger">Confirm Password does not match</p>
+          </div>
+        </div>
       </div>
 
       <!-- buttons -->

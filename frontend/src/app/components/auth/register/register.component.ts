@@ -17,15 +17,20 @@ export class RegisterComponent {
   registerForm!: FormGroup;
 
   constructor(private fb: FormBuilder) {
-    this.registerForm = this.fb.group({
-      username: new FormControl('', [Validators.required, Validators.email]),
-      password: new FormControl('', [
-        Validators.required,
-        Validators.minLength(6),
-        RegisterComponent.exclamationMarkValidator,
-      ]),
-      cnfPassword: new FormControl(''),
-    });
+    this.registerForm = this.fb.group(
+      {
+        username: new FormControl('', [Validators.required, Validators.email]),
+        password: new FormControl('', [
+          Validators.required,
+          Validators.minLength(6),
+          RegisterComponent.exclamationMarkValidator,
+        ]),
+        cnfPassword: new FormControl('', Validators.required),
+      },
+      {
+        validators: RegisterComponent.passwordMatchValidator,
+      }
+    );
 
     // this.registerForm.patchValue({
     //   username: 'test@test.com',
@@ -42,7 +47,7 @@ export class RegisterComponent {
   }
 
   get cnfPassword() {
-    return this.registerForm.get('cnfPAssword') as FormControl;
+    return this.registerForm.get('cnfPassword') as FormControl;
   }
 
   onSubmit() {
@@ -57,5 +62,17 @@ export class RegisterComponent {
   ): ValidationErrors | null {
     const hasExclamation = control.value.indexOf('!') >= 0;
     return hasExclamation ? null : { exclamation: true };
+  }
+
+  static passwordMatchValidator(
+    control: AbstractControl
+  ): ValidationErrors | null {
+    const password = control.get('password');
+    const cnfPassword = control.get('cnfPassword');
+
+    if (!password || !cnfPassword || password.value === cnfPassword.value) {
+      return null;
+    }
+    return { mismatched: true };
   }
 }
