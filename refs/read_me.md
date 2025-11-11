@@ -284,7 +284,7 @@ friends = ["Joey", "Monica", "Ross", "Chandler"] // Pure Change
 
 - Reactive form / Model driven form
   > FormControl, FormGroup, FormBuilder, FormArray
-  > Validators / Custom Validator Functions
+  > Validators / Custom Validator Functions (Element level, Form level)
   > Error Messages
   > Validation are imposed on Class Model
 
@@ -296,7 +296,10 @@ friends = ["Joey", "Monica", "Ross", "Chandler"] // Pure Change
 
 ---
 
-# Services
+# Services : Injectable
+
+- DIP: Dependency Injection Principle
+- SRP: Single Responsibility Principle
 
 > ng g s services/user
 
@@ -306,3 +309,36 @@ friends = ["Joey", "Monica", "Ross", "Chandler"] // Pure Change
 - Providers Array in Root Module : Singleton effect - application-wide including other services
 - Providers Array in Root Component : Singleton effect - Self component and all the components but not in other services
 - Providers Array in Other Component : Singleton effect - Self component and only the child components
+
+## DI Modifiers
+
+- @Self(): look-up for token in the self component
+- @Host(): look-up for token in Self as well as in parent component
+- @SkipSelf(): don't look-up for token in the self component
+- @Optional(): makes the injected dependency as optional. Ignores null injector error
+
+CompA -> CompB
+
+CompA => CompB (Siblings)
+
+# Observables vs Promises
+
+## Observable
+
+- series of events
+- lazy, by default
+- keep observing the data source
+- Powerful operators support
+- Cancelable
+- both async and sync
+- consumed using subscribe() method
+
+## Promises
+
+- one shot
+- eagerly executed
+- polling required
+- No Operator support
+- Not cancelable
+- always async
+- consume using .then().catch() / async...await

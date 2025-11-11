@@ -19,6 +19,7 @@ import { RegisterComponent } from './components/auth/register/register.component
 import { UserService } from './services/user.service';
 import { CounterAComponent } from './components/playground/counter-a/counter-a.component';
 import { CounterBComponent } from './components/playground/counter-b/counter-b.component';
+import { ObservableDemoComponent } from './components/playground/observable-demo/observable-demo.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { CounterBComponent } from './components/playground/counter-b/counter-b.c
     RegisterComponent,
     CounterAComponent,
     CounterBComponent,
+    ObservableDemoComponent,
   ],
   imports: [
     // Imports module functionality
