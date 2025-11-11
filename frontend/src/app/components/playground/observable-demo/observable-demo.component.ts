@@ -1,6 +1,15 @@
 import { Component } from '@angular/core';
 
-import { Observable, Subscription } from 'rxjs';
+import {
+  Observable,
+  Subscription,
+  interval,
+  from,
+  map,
+  filter,
+  tap,
+  take,
+} from 'rxjs';
 
 @Component({
   selector: 'app-observable-demo',
@@ -30,5 +39,37 @@ export class ObservableDemoComponent {
 
   onUnsubscribe() {
     this.unsub$.unsubscribe();
+  }
+
+  // Interval Operator
+  interval$ = interval(1000);
+  unsubInterval!: Subscription;
+
+  onInterval() {
+    this.unsubInterval = this.interval$
+      .pipe(
+        tap((val) => console.log('[TAP]', val)),
+        filter((val) => val % 2 == 0),
+        map((val) => val * 2),
+        take(5)
+      )
+      .subscribe((value) => console.log(value));
+  }
+
+  onUnsubInterval() {
+    this.unsubInterval.unsubscribe();
+  }
+
+  // From Operator
+  friends = ['Monica', 'Ross', 'Rachel', 'Joey'];
+  from$ = from(this.friends);
+
+  onFromSubscribe() {
+    this.from$
+      .pipe(
+        filter((friend) => friend.startsWith('R')),
+        map((value) => 'One of Best friend : ' + value)
+      )
+      .subscribe(console.log); // Method Referencing
   }
 }

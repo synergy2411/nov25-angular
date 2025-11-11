@@ -1,3 +1,10 @@
 <h2>Observable Demo Component</h2>
 <button class="btn btn-primary" (click)="onSubscribe()">Subscribe</button>
 <button class="btn btn-secondary" (click)="onUnsubscribe()">Unsubscribe</button>
+<hr />
+<button class="btn btn-primary" (click)="onInterval()">Interval</button>
+<button class="btn btn-secondary" (click)="onUnsubInterval()">
+  Unsub Interval
+</button>
+<hr />
+<button (click)="onFromSubscribe()" class="btn btn-primary">From</button>
