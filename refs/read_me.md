@@ -347,3 +347,30 @@ CompA => CompB (Siblings)
 
 - Observable : pipe(), subscribe()
 - Observer : next(), error(), complete()
+
+### Subject Types -
+
+- Behaviour Subject : initialize upcoming subscription with seed value
+- Replay Subject: replays last n number of emission for the upcoming subscription
+- Async Subject: last emitted value upon completion
+
+---
+
+# JSON SERVER Config
+
+- Install json-server
+  > [sudo] npm install json-server@0.17.4 -g
+  > json-server -v
+- Create json file -> db.json
+- Running the json-server
+  > json-server --watch db.json
+
+---
+
+# HttpClient Service - CRUD app
+
+- IExpense : Data Model
+- ExpenseService : performs all CRUD Operations
+- ExpensesComponent : displays all expenses
+- ExpenseItem : display individual expense, also delete the expense
+- ExpenseForm: add / edit the expense

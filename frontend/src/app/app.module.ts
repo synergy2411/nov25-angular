@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { UsersComponent } from './components/users/users.component';
@@ -20,6 +21,7 @@ import { UserService } from './services/user.service';
 import { CounterAComponent } from './components/playground/counter-a/counter-a.component';
 import { CounterBComponent } from './components/playground/counter-b/counter-b.component';
 import { ObservableDemoComponent } from './components/playground/observable-demo/observable-demo.component';
+import { ExpensesComponent } from './components/expenses/expenses.component';
 
 @NgModule({
   declarations: [
@@ -41,12 +43,14 @@ import { ObservableDemoComponent } from './components/playground/observable-demo
     CounterAComponent,
     CounterBComponent,
     ObservableDemoComponent,
+    ExpensesComponent,
   ],
   imports: [
     // Imports module functionality
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpClientModule,
   ],
   providers: [UserService], // Creates tokens and register the Services
   bootstrap: [AppComponent],
