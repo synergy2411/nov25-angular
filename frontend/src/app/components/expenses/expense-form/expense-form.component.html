@@ -1,0 +1,62 @@
+<div class="backdrop">
+  <div class="my-dialog">
+    <h4 class="text-center">Add Expense</h4>
+
+    <form [formGroup]="expenseForm" (ngSubmit)="onSubmit()">
+      <!-- title -->
+      <div class="form-floating mb-3">
+        <input
+          type="text"
+          class="form-control"
+          name="title"
+          id="title"
+          placeholder=""
+          formControlName="title"
+        />
+        <label for="title">Title</label>
+      </div>
+
+      <!-- amount -->
+      <div class="form-floating mb-3">
+        <input
+          type="number"
+          class="form-control"
+          name="amount"
+          id="amount"
+          placeholder=""
+          formControlName="amount"
+        />
+        <label for="amount">Amount</label>
+      </div>
+
+      <!-- createdAt -->
+      <div class="form-floating mb-3">
+        <input
+          type="date"
+          class="form-control"
+          name="createdAt"
+          id="createdAt"
+          placeholder=""
+          formControlName="createdAt"
+        />
+        <label for="createdAt">Created Date</label>
+      </div>
+
+      <!-- buttons -->
+      <div class="row">
+        <div class="col">
+          <div class="d-grid">
+            <button class="btn btn-success" type="submit">Add</button>
+          </div>
+        </div>
+        <div class="col">
+          <div class="d-grid">
+            <button class="btn btn-secondary" type="button" (click)="onClose()">
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

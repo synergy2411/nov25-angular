@@ -22,6 +22,8 @@ import { CounterAComponent } from './components/playground/counter-a/counter-a.c
 import { CounterBComponent } from './components/playground/counter-b/counter-b.component';
 import { ObservableDemoComponent } from './components/playground/observable-demo/observable-demo.component';
 import { ExpensesComponent } from './components/expenses/expenses.component';
+import { ExpenseItemComponent } from './components/expenses/expense-item/expense-item.component';
+import { ExpenseFormComponent } from './components/expenses/expense-form/expense-form.component';
 
 @NgModule({
   declarations: [
@@ -44,6 +46,8 @@ import { ExpensesComponent } from './components/expenses/expenses.component';
     CounterBComponent,
     ObservableDemoComponent,
     ExpensesComponent,
+    ExpenseItemComponent,
+    ExpenseFormComponent,
   ],
   imports: [
     // Imports module functionality

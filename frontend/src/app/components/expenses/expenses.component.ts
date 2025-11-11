@@ -12,9 +12,15 @@ export class ExpensesComponent implements OnInit {
 
   constructor(private expenseService: ExpenseService) {}
 
+  showForm = false;
+
   ngOnInit(): void {
     this.expenseService
       .fetchAll()
       .subscribe((allExpenses) => (this.expenseCollection = allExpenses));
+  }
+
+  closeForm() {
+    this.showForm = false;
   }
 }

@@ -14,7 +14,13 @@ export class ExpenseService {
     return this.http.get<IExpense[]>(this.baseURL);
   }
 
-  create() {}
+  create(expense: IExpense) {
+    return this.http.post<IExpense>(this.baseURL, expense, {
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
+  }
 
   update() {}
 
