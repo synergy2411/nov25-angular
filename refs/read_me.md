@@ -342,3 +342,8 @@ CompA => CompB (Siblings)
 - Not cancelable
 - always async
 - consume using .then().catch() / async...await
+
+## Subjects are both - Observer and Observable
+
+- Observable : pipe(), subscribe()
+- Observer : next(), error(), complete()

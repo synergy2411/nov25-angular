@@ -9,6 +9,10 @@ import {
   filter,
   tap,
   take,
+  Subject,
+  BehaviorSubject,
+  ReplaySubject,
+  AsyncSubject,
 } from 'rxjs';
 
 @Component({
@@ -71,5 +75,25 @@ export class ObservableDemoComponent {
         map((value) => 'One of Best friend : ' + value)
       )
       .subscribe(console.log); // Method Referencing
+  }
+
+  // Subject
+
+  onSubject() {
+    // const subject = new Subject();
+    // const subject = new BehaviorSubject(100);
+    // const subject = new ReplaySubject(1);
+    const subject = new AsyncSubject();
+
+    subject.subscribe((value) => console.log('Subs 1: ', value));
+    subject.next(101);
+    subject.next(102);
+    subject.next(103);
+
+    subject.subscribe((value) => console.log('Subs 2: ', value));
+    subject.next(104);
+    subject.next(105);
+
+    subject.complete();
   }
 }
