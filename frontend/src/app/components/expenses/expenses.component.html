@@ -20,6 +20,7 @@
   [expense]="selectedExpense"
   *ngIf="editForm"
   (closeEvent)="editForm = false"
+  (formSubmitEvent)="onEditFormSubmit($event)"
 ></app-expense-form>
 
 <div class="row">

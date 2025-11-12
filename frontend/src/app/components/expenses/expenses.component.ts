@@ -43,6 +43,16 @@ export class ExpensesComponent implements OnInit {
     this.selectedExpense = expense;
   }
 
+  onEditFormSubmit(expense: IExpense) {
+    this.expenseService.update(expense).subscribe((updatedExpense) => {
+      const position = this.expenseCollection.findIndex(
+        (exp) => exp.id === expense.id
+      );
+      this.expenseCollection[position] = updatedExpense;
+      this.editForm = false;
+    });
+  }
+
   closeForm() {
     this.showForm = false;
   }

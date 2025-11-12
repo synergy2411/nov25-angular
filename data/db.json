@@ -2,21 +2,27 @@
   "expenses": [
     {
       "id": "e001",
-      "title": "grocery",
-      "amount": 29,
+      "title": "shopping",
+      "amount": 199,
       "createdAt": "2025-12-11"
     },
     {
       "id": "e002",
       "title": "insurance",
-      "amount": 59,
+      "amount": 89,
       "createdAt": "2024-10-10"
     },
     {
       "id": "e003",
       "title": "planting",
       "amount": 89,
-      "createdAt": "2025-05-07"
+      "createdAt": "2025-06-24"
+    },
+    {
+      "title": "Bag",
+      "amount": 21,
+      "createdAt": "2025-11-12",
+      "id": "6NJf5oD"
     }
   ]
 }

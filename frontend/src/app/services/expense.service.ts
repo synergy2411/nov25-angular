@@ -22,7 +22,13 @@ export class ExpenseService {
     });
   }
 
-  update() {}
+  update(expense: IExpense) {
+    return this.http.patch<IExpense>(`${this.baseURL}/${expense.id}`, expense, {
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
+  }
 
   delete(expenseId: string) {
     return this.http.delete(`${this.baseURL}/${expenseId}`);

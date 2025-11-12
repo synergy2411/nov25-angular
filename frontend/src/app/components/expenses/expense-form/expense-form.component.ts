@@ -36,6 +36,9 @@ export class ExpenseFormComponent implements OnInit {
   onSubmit() {
     console.log(this.expenseForm.value);
     let expense: IExpense = { ...this.expenseForm.value };
+    if (this.expense) {
+      expense = { ...expense, id: this.expense.id };
+    }
     this.formSubmitEvent.emit(expense);
   }
 
