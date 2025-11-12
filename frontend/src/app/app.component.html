@@ -14,9 +14,9 @@
 
   <!-- <app-pipe-demo></app-pipe-demo> -->
 
-  <!-- <app-login></app-login> -->
+  <app-login></app-login>
 
-  <app-register></app-register>
+  <!-- <app-register></app-register> -->
 
   <!-- <app-counter-a></app-counter-a>
 
@@ -28,5 +28,5 @@
 
   <!-- <app-expenses></app-expenses> -->
 
-  <!-- <app-users></app-users> -->
+  <app-users *ngIf="authService.isAuthenticated()"></app-users>
 </div>
