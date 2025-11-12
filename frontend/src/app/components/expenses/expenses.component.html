@@ -16,11 +16,18 @@
   (formSubmitEvent)="onAddExpense($event)"
 ></app-expense-form>
 
+<app-expense-form
+  [expense]="selectedExpense"
+  *ngIf="editForm"
+  (closeEvent)="editForm = false"
+></app-expense-form>
+
 <div class="row">
   <div class="col-4 mb-3" *ngFor="let expense of expenseCollection">
     <app-expense-item
       [expense]="expense"
       (deleteEvent)="onDeleteExpense($event)"
+      (editEvent)="onEditExpense($event)"
     ></app-expense-item>
   </div>
 </div>

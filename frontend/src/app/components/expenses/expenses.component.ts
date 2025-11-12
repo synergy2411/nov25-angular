@@ -9,10 +9,12 @@ import { IExpense } from '../../model/expense-model';
 })
 export class ExpensesComponent implements OnInit {
   expenseCollection!: IExpense[];
+  selectedExpense!: IExpense;
 
   constructor(private expenseService: ExpenseService) {}
 
   showForm = false;
+  editForm = false;
 
   ngOnInit(): void {
     this.expenseService
@@ -34,6 +36,11 @@ export class ExpensesComponent implements OnInit {
       );
       this.expenseCollection.splice(position, 1);
     });
+  }
+
+  onEditExpense(expense: IExpense) {
+    this.editForm = true;
+    this.selectedExpense = expense;
   }
 
   closeForm() {
