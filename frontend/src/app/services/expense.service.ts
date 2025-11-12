@@ -6,7 +6,7 @@ import { IExpense } from '../model/expense-model';
   providedIn: 'root',
 })
 export class ExpenseService {
-  private baseURL = 'http://localhost:3000/expenses/';
+  private baseURL = 'http://localhost:3000/expenses';
 
   constructor(private http: HttpClient) {}
 
@@ -24,5 +24,7 @@ export class ExpenseService {
 
   update() {}
 
-  delete() {}
+  delete(expenseId: string) {
+    return this.http.delete(`${this.baseURL}/${expenseId}`);
+  }
 }
