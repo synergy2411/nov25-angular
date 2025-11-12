@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { ErrorHandler, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
@@ -25,6 +25,8 @@ import { ExpensesComponent } from './components/expenses/expenses.component';
 import { ExpenseItemComponent } from './components/expenses/expense-item/expense-item.component';
 import { ExpenseFormComponent } from './components/expenses/expense-form/expense-form.component';
 import { AuthInterceptor } from './services/interceptors/auth.interceptor';
+import { ResponseInterceptor } from './services/interceptors/response.interceptor';
+import { GlobalErrorHandlerService } from './services/global-error-handler.service';
 
 @NgModule({
   declarations: [
@@ -60,8 +62,17 @@ import { AuthInterceptor } from './services/interceptors/auth.interceptor';
   providers: [
     UserService,
     {
+      provide: ErrorHandler,
+      useClass: GlobalErrorHandlerService,
+    },
+    {
       provide: HTTP_INTERCEPTORS,
       useClass: AuthInterceptor,
+      multi: true,
+    },
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: ResponseInterceptor,
       multi: true,
     },
   ], // Creates tokens and register the Services

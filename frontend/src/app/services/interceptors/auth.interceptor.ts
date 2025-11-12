@@ -21,6 +21,6 @@ export class AuthInterceptor implements HttpInterceptor {
       params: new HttpParams().set('auth', this.authService.getToken()),
     });
 
-    return next.handle(clonedReq);
+    return next.handle(req);
   }
 }
