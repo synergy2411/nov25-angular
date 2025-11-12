@@ -17,9 +17,7 @@ export class UserService {
 
   getUserdata() {
     // return USER_DATA;
-    return this.http.get<IUser[]>(this.baseURL, {
-      params: new HttpParams().set('auth', this.authService.getToken()),
-    });
+    return this.http.get<IUser[]>(this.baseURL);
   }
 }
 

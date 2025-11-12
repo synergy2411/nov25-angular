@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { UsersComponent } from './components/users/users.component';
@@ -24,6 +24,7 @@ import { ObservableDemoComponent } from './components/playground/observable-demo
 import { ExpensesComponent } from './components/expenses/expenses.component';
 import { ExpenseItemComponent } from './components/expenses/expense-item/expense-item.component';
 import { ExpenseFormComponent } from './components/expenses/expense-form/expense-form.component';
+import { AuthInterceptor } from './services/interceptors/auth.interceptor';
 
 @NgModule({
   declarations: [
@@ -56,7 +57,14 @@ import { ExpenseFormComponent } from './components/expenses/expense-form/expense
     ReactiveFormsModule,
     HttpClientModule,
   ],
-  providers: [UserService], // Creates tokens and register the Services
+  providers: [
+    UserService,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptor,
+      multi: true,
+    },
+  ], // Creates tokens and register the Services
   bootstrap: [AppComponent],
 })
 export class AppModule {}
