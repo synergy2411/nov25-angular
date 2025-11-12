@@ -374,3 +374,14 @@ CompA => CompB (Siblings)
 - ExpensesComponent : displays all expenses
 - ExpenseItem : display individual expense, also delete the expense
 - ExpenseForm: add / edit the expense
+
+---
+
+## Firebase Config for User Auth
+
+apiKey: "AIzaSyBnNnK6wzhLKZVkU5sOgCyHFXnpO47h--4",
+authDomain: "sk-ng-nov-25.firebaseapp.com",
+
+### Install Firebase SDK
+
+> npm install firebase

@@ -8,6 +8,7 @@ import {
   ValidationErrors,
   Validators,
 } from '@angular/forms';
+import { AuthService } from '../../../services/auth.service';
 
 @Component({
   selector: 'app-register',
@@ -21,7 +22,7 @@ export class RegisterComponent {
 
   countries = ['india', 'australia', 'usa', 'singapore'];
 
-  constructor(private fb: FormBuilder) {
+  constructor(private authService: AuthService, private fb: FormBuilder) {
     this.registerForm = this.fb.group(
       {
         username: this.username,
@@ -80,6 +81,7 @@ export class RegisterComponent {
     // console.log('Password : ', password);
 
     console.log(this.registerForm.value);
+    this.authService.userRegistration(username, password);
   }
 
   // CUSTOM VALIDATOR
