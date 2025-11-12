@@ -2,6 +2,7 @@ import { ErrorHandler, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
+import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { UsersComponent } from './components/users/users.component';
@@ -27,6 +28,8 @@ import { ExpenseFormComponent } from './components/expenses/expense-form/expense
 import { AuthInterceptor } from './services/interceptors/auth.interceptor';
 import { ResponseInterceptor } from './services/interceptors/response.interceptor';
 import { GlobalErrorHandlerService } from './services/global-error-handler.service';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { APP_ROUTES } from './app.routes';
 
 @NgModule({
   declarations: [
@@ -51,6 +54,7 @@ import { GlobalErrorHandlerService } from './services/global-error-handler.servi
     ExpensesComponent,
     ExpenseItemComponent,
     ExpenseFormComponent,
+    PageNotFoundComponent,
   ],
   imports: [
     // Imports module functionality
@@ -58,6 +62,7 @@ import { GlobalErrorHandlerService } from './services/global-error-handler.servi
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    RouterModule.forRoot(APP_ROUTES),
   ],
   providers: [
     UserService,

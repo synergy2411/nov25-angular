@@ -385,3 +385,21 @@ authDomain: "sk-ng-nov-25.firebaseapp.com",
 ### Install Firebase SDK
 
 > npm install firebase
+
+---
+
+# Single Page App
+
+- browser will not reload / refresh the page
+- server will send complet SPA in one go
+- deep linking
+- bookmarkable URL
+- better UI/UX
+
+## Hashbang Mode
+
+- http://www.example.com/index/#!/first
+
+## HTML5 Mode / Regular Mode (default in Angular)
+
+- http://www.example.com/index/first

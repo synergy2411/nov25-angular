@@ -1,6 +1,8 @@
 <div class="container">
   <h1 appBetterHighlight favColor="grey">App works!</h1>
 
+  <router-outlet></router-outlet>
+
   <!-- <input type="text" [(ngModel)]="title" />
   <button class="btn btn-primary" (click)="toggle = !toggle">Toggle</button> -->
 
@@ -14,7 +16,7 @@
 
   <!-- <app-pipe-demo></app-pipe-demo> -->
 
-  <app-login></app-login>
+  <!-- <app-login></app-login> -->
 
   <!-- <app-register></app-register> -->
 
@@ -28,5 +30,5 @@
 
   <!-- <app-expenses></app-expenses> -->
 
-  <app-users *ngIf="authService.isAuthenticated()"></app-users>
+  <!-- <app-users *ngIf="authService.isAuthenticated()"></app-users> -->
 </div>
