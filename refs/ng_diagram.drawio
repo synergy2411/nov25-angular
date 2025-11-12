@@ -469,54 +469,54 @@
     </mxGraphModel>
   </diagram>
   <diagram id="KXIdoRFcYj_LTVX305W0" name="DI Hierarchical Injection">
-    <mxGraphModel dx="713" dy="425" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="833" dy="489" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="wigwP3b8rMKTx1bGRM7--1" value="DI Hierarchical Injection" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
+        <mxCell id="wigwP3b8rMKTx1bGRM7--1" value="DI Hierarchical Injection" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" parent="1" vertex="1">
           <mxGeometry x="380" y="80" width="100" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="br7v4dfNRP2N33dX-L4p-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="br7v4dfNRP2N33dX-L4p-1" target="br7v4dfNRP2N33dX-L4p-2">
+        <mxCell id="br7v4dfNRP2N33dX-L4p-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="br7v4dfNRP2N33dX-L4p-1" target="br7v4dfNRP2N33dX-L4p-2" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="br7v4dfNRP2N33dX-L4p-1" value="Null Injector" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="370" y="180" width="120" height="60" as="geometry" />
+        <mxCell id="br7v4dfNRP2N33dX-L4p-1" value="Null Injector" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="280" y="170" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="br7v4dfNRP2N33dX-L4p-5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="br7v4dfNRP2N33dX-L4p-2" target="br7v4dfNRP2N33dX-L4p-4">
+        <mxCell id="br7v4dfNRP2N33dX-L4p-5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="br7v4dfNRP2N33dX-L4p-2" target="br7v4dfNRP2N33dX-L4p-4" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="br7v4dfNRP2N33dX-L4p-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;dashed=1;" edge="1" parent="1" source="br7v4dfNRP2N33dX-L4p-2" target="br7v4dfNRP2N33dX-L4p-1">
+        <mxCell id="br7v4dfNRP2N33dX-L4p-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;dashed=1;" parent="1" source="br7v4dfNRP2N33dX-L4p-2" target="br7v4dfNRP2N33dX-L4p-1" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="br7v4dfNRP2N33dX-L4p-2" value="Platform Injector" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="370" y="290" width="120" height="60" as="geometry" />
+        <mxCell id="br7v4dfNRP2N33dX-L4p-2" value="Platform Injector" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="280" y="280" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="br7v4dfNRP2N33dX-L4p-7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="br7v4dfNRP2N33dX-L4p-4" target="br7v4dfNRP2N33dX-L4p-6">
+        <mxCell id="br7v4dfNRP2N33dX-L4p-7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="br7v4dfNRP2N33dX-L4p-4" target="br7v4dfNRP2N33dX-L4p-6" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="br7v4dfNRP2N33dX-L4p-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;dashed=1;" edge="1" parent="1" source="br7v4dfNRP2N33dX-L4p-4" target="br7v4dfNRP2N33dX-L4p-2">
+        <mxCell id="br7v4dfNRP2N33dX-L4p-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;dashed=1;" parent="1" source="br7v4dfNRP2N33dX-L4p-4" target="br7v4dfNRP2N33dX-L4p-2" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="br7v4dfNRP2N33dX-L4p-4" value="Module Injector" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="370" y="400" width="120" height="60" as="geometry" />
+        <mxCell id="br7v4dfNRP2N33dX-L4p-4" value="Module Injector" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="280" y="390" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="br7v4dfNRP2N33dX-L4p-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;dashed=1;" edge="1" parent="1" source="br7v4dfNRP2N33dX-L4p-6" target="br7v4dfNRP2N33dX-L4p-4">
+        <mxCell id="br7v4dfNRP2N33dX-L4p-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;dashed=1;" parent="1" source="br7v4dfNRP2N33dX-L4p-6" target="br7v4dfNRP2N33dX-L4p-4" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="br7v4dfNRP2N33dX-L4p-6" value="Element Injector" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="370" y="510" width="120" height="60" as="geometry" />
+        <mxCell id="br7v4dfNRP2N33dX-L4p-6" value="Element Injector" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="280" y="500" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="br7v4dfNRP2N33dX-L4p-8" value="Angular search for Injector token in all top level components" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="500" y="520" width="350" height="30" as="geometry" />
+        <mxCell id="br7v4dfNRP2N33dX-L4p-8" value="Angular search for Injector token in all top level components" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="410" y="510" width="350" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="br7v4dfNRP2N33dX-L4p-12" value="Multiple Angular Apps running under same platform" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="500" y="300" width="320" height="30" as="geometry" />
+        <mxCell id="br7v4dfNRP2N33dX-L4p-12" value="Multiple Angular Apps running under same platform" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="410" y="290" width="320" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="br7v4dfNRP2N33dX-L4p-14" value="throws the error &#39;Null Injector&#39;" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="490" y="190" width="230" height="30" as="geometry" />
+        <mxCell id="br7v4dfNRP2N33dX-L4p-14" value="throws the error &#39;Null Injector&#39;" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="400" y="180" width="230" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="br7v4dfNRP2N33dX-L4p-15" value="Search modules for token" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="460" y="410" width="260" height="30" as="geometry" />
+        <mxCell id="br7v4dfNRP2N33dX-L4p-15" value="Search modules for token" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="370" y="400" width="260" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

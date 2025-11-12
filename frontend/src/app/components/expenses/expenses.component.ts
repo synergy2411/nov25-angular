@@ -20,6 +20,13 @@ export class ExpensesComponent implements OnInit {
       .subscribe((allExpenses) => (this.expenseCollection = allExpenses));
   }
 
+  onAddExpense(newExpense: IExpense) {
+    this.expenseService.create(newExpense).subscribe((createdExpense) => {
+      this.expenseCollection = [createdExpense, ...this.expenseCollection];
+      this.closeForm();
+    });
+  }
+
   closeForm() {
     this.showForm = false;
   }
