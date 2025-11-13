@@ -386,6 +386,10 @@ authDomain: "sk-ng-nov-25.firebaseapp.com",
 
 > npm install firebase
 
+### Interceptors
+
+### Global Error Handler
+
 ---
 
 # Single Page App
@@ -395,6 +399,12 @@ authDomain: "sk-ng-nov-25.firebaseapp.com",
 - deep linking
 - bookmarkable URL
 - better UI/UX
+
+## Routing Terminologies
+
+- Routes: APP_ROUTES
+- RouterModule (forRoot, forChild)
+- RouterOutlet
 
 ## Hashbang Mode
 

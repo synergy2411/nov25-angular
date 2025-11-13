@@ -30,6 +30,7 @@ import { ResponseInterceptor } from './services/interceptors/response.intercepto
 import { GlobalErrorHandlerService } from './services/global-error-handler.service';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { APP_ROUTES } from './app.routes';
+import { MainNavigationComponent } from './components/main-navigation/main-navigation.component';
 
 @NgModule({
   declarations: [
@@ -55,6 +56,7 @@ import { APP_ROUTES } from './app.routes';
     ExpenseItemComponent,
     ExpenseFormComponent,
     PageNotFoundComponent,
+    MainNavigationComponent,
   ],
   imports: [
     // Imports module functionality
