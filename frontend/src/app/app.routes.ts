@@ -8,6 +8,7 @@ import { loginGuard } from './services/guards/login.guard';
 import { leaveGuard } from './services/guards/leave.guard';
 import { CoursesComponent } from './components/courses/courses.component';
 import { CourseDetailComponent } from './components/courses/course-detail/course-detail.component';
+import { courseResolver } from './services/resolvers/course.resolver';
 
 export const APP_ROUTES: Routes = [
   {
@@ -40,6 +41,7 @@ export const APP_ROUTES: Routes = [
       {
         path: ':courseId', // http://localhost:4200/courses/{courseId}
         component: CourseDetailComponent,
+        resolve: { course: courseResolver },
       },
     ],
   },

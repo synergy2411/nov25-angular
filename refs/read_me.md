@@ -410,6 +410,7 @@ authDomain: "sk-ng-nov-25.firebaseapp.com",
 - Route Guard:
   > CanActivate - allow / disallow to enter into the route
   > CanDeactivate - allow / disallow to leave the route
+- Resolver: pre-populate data in the route
 
 ## Hashbang Mode
 

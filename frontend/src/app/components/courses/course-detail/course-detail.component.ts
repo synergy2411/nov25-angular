@@ -25,14 +25,16 @@ export class CourseDetailComponent implements OnInit, OnDestroy {
     // console.log('Course ID : ', courseId);
 
     // Observable
-    this.unsubParams$ = this.route.params.subscribe((params) => {
-      this.courseService
-        .fetchById(params['courseId'])
-        .subscribe((course) => (this.course = course));
-    });
+    // this.unsubParams$ = this.route.params.subscribe((params) => {
+    //   this.courseService
+    //     .fetchById(params['courseId'])
+    //     .subscribe((course) => (this.course = course));
+    // });
+
+    this.route.data.subscribe((data) => (this.course = data['course']));
   }
 
   ngOnDestroy(): void {
-    this.unsubParams$.unsubscribe();
+    // this.unsubParams$.unsubscribe();
   }
 }
