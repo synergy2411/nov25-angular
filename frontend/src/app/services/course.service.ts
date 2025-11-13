@@ -14,7 +14,9 @@ export class CourseService {
     return this.http.get<ICourse[]>(this.baseURL);
   }
 
-  fetchById(courseId: string) {}
+  fetchById(courseId: string) {
+    return this.http.get<ICourse>(`${this.baseURL}/${courseId}`);
+  }
 
   create(course: ICourse) {}
 

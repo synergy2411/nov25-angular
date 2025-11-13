@@ -1,1 +1,14 @@
-<p>course-detail works!</p>
+<div class="backdrop">
+  <div class="my-dialog">
+    <div class="card">
+      <img class="card-img-top" [src]="course.logo" [alt]="course.title" />
+      <div class="card-body">
+        <h4 class="card-title">{{ course.title | uppercase }}</h4>
+        <p class="card-text lead">Duration : {{ course.duration }}</p>
+        <p>
+          Click <a routerLink="/courses">here</a> to see all available courses
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
