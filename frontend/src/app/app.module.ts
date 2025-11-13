@@ -32,6 +32,7 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
 import { APP_ROUTES } from './app.routes';
 import { MainNavigationComponent } from './components/main-navigation/main-navigation.component';
 import { CoursesComponent } from './components/courses/courses.component';
+import { CourseDetailComponent } from './components/courses/course-detail/course-detail.component';
 
 @NgModule({
   declarations: [
@@ -59,6 +60,7 @@ import { CoursesComponent } from './components/courses/courses.component';
     PageNotFoundComponent,
     MainNavigationComponent,
     CoursesComponent,
+    CourseDetailComponent,
   ],
   imports: [
     // Imports module functionality

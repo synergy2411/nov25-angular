@@ -7,6 +7,7 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
 import { loginGuard } from './services/guards/login.guard';
 import { leaveGuard } from './services/guards/leave.guard';
 import { CoursesComponent } from './components/courses/courses.component';
+import { CourseDetailComponent } from './components/courses/course-detail/course-detail.component';
 
 export const APP_ROUTES: Routes = [
   {
@@ -33,8 +34,14 @@ export const APP_ROUTES: Routes = [
     component: ExpensesComponent,
   },
   {
-    path: 'courses',
+    path: 'courses', // http://localhost:4200/courses
     component: CoursesComponent,
+    children: [
+      {
+        path: ':courseId', // http://localhost:4200/courses/{courseId}
+        component: CourseDetailComponent,
+      },
+    ],
   },
   {
     path: '**', // executes when URL path does not match above mentioned paths

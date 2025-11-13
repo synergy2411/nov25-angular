@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ICourse } from '../../model/course-model';
 import { CourseService } from '../../services/course.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-courses',
@@ -10,11 +11,15 @@ import { CourseService } from '../../services/course.service';
 export class CoursesComponent implements OnInit {
   courseCollection!: ICourse[];
 
-  constructor(private courseService: CourseService) {}
+  constructor(private router: Router, private courseService: CourseService) {}
 
   ngOnInit(): void {
     this.courseService
       .fetchAll()
       .subscribe((allCourses) => (this.courseCollection = allCourses));
+  }
+
+  onCourseSelected(courseId: string) {
+    this.router.navigateByUrl(`/courses/${courseId}`);
   }
 }
