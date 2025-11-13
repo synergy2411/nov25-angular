@@ -20,7 +20,9 @@ export class CourseService {
 
   create(course: ICourse) {}
 
-  deleteById(courseId: string) {}
+  deleteById(courseId: string) {
+    return this.http.delete(`${this.baseURL}/${courseId}`);
+  }
 
   update(course: ICourse) {}
 }

@@ -1,6 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ɵNgNoValidate } from '@angular/forms';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { CourseService } from '../../../services/course.service';
 import { ICourse } from '../../../model/course-model';
@@ -16,7 +16,8 @@ export class CourseDetailComponent implements OnInit, OnDestroy {
 
   constructor(
     private route: ActivatedRoute,
-    private courseService: CourseService
+    private courseService: CourseService,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
@@ -31,10 +32,26 @@ export class CourseDetailComponent implements OnInit, OnDestroy {
     //     .subscribe((course) => (this.course = course));
     // });
 
+    // Pre-fetching od data
     this.route.data.subscribe((data) => (this.course = data['course']));
   }
 
   ngOnDestroy(): void {
     // this.unsubParams$.unsubscribe();
+  }
+
+  onDelete() {
+    if (
+      confirm(
+        'Are you sure to delete this item - ' +
+          this.course.title.toUpperCase() +
+          '?'
+      )
+    )
+      this.courseService.deleteById(this.course.id).subscribe(() => {
+        this.router.navigate(['/courses'], {
+          queryParams: { courseId: this.course.id },
+        });
+      });
   }
 }

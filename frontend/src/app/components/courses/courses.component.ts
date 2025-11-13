@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, DoCheck, OnInit } from '@angular/core';
 import { ICourse } from '../../model/course-model';
 import { CourseService } from '../../services/course.service';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-courses',
@@ -11,9 +11,22 @@ import { Router } from '@angular/router';
 export class CoursesComponent implements OnInit {
   courseCollection!: ICourse[];
 
-  constructor(private router: Router, private courseService: CourseService) {}
+  constructor(
+    private router: Router,
+    private courseService: CourseService,
+    private route: ActivatedRoute
+  ) {}
 
   ngOnInit(): void {
+    this.fetchAllCourses();
+    this.route.queryParams.subscribe((query) => {
+      if (query['courseId']) {
+        this.fetchAllCourses();
+      }
+    });
+  }
+
+  private fetchAllCourses() {
     this.courseService
       .fetchAll()
       .subscribe((allCourses) => (this.courseCollection = allCourses));
