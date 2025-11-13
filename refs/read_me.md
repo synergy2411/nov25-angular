@@ -402,9 +402,12 @@ authDomain: "sk-ng-nov-25.firebaseapp.com",
 
 ## Routing Terminologies
 
-- Routes: APP_ROUTES
-- RouterModule (forRoot, forChild)
-- RouterOutlet
+- Routes: APP_ROUTES : create the route configuration
+- RouterModule (forRoot, forChild) : register routes with the app
+- RouterOutlet: space to load the component template
+- RouterLink: Prevent page reloading
+- Router Service: programmatic navigation
+- Route Guard: CanActivate - allow / disallow to enter into the route
 
 ## Hashbang Mode
 

@@ -4,6 +4,7 @@ import { RegisterComponent } from './components/auth/register/register.component
 import { UsersComponent } from './components/users/users.component';
 import { ExpensesComponent } from './components/expenses/expenses.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { loginGuard } from './services/guards/login.guard';
 
 export const APP_ROUTES: Routes = [
   {
@@ -22,6 +23,7 @@ export const APP_ROUTES: Routes = [
   {
     path: 'users', // http://localhost:4200/users
     component: UsersComponent,
+    canActivate: [loginGuard],
   },
   {
     path: 'expenses', // http://localhost:4200/expense
