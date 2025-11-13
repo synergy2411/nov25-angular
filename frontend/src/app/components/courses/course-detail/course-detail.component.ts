@@ -54,4 +54,8 @@ export class CourseDetailComponent implements OnInit, OnDestroy {
         });
       });
   }
+
+  onEdit() {
+    this.router.navigateByUrl(`/courses/${this.course.id}/edit`);
+  }
 }

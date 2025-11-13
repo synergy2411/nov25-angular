@@ -20,7 +20,7 @@ export class CoursesComponent implements OnInit {
   ngOnInit(): void {
     this.fetchAllCourses();
     this.route.queryParams.subscribe((query) => {
-      if (query['courseId']) {
+      if (query['courseId'] || query['isAdded']) {
         this.fetchAllCourses();
       }
     });

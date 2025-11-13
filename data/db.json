@@ -37,6 +37,18 @@
       "title": "Vue 101",
       "duration": 80,
       "logo": "https://images.seeklogo.com/logo-png/27/1/vue-js-logo-png_seeklogo-274070.png"
+    },
+    {
+      "title": "Beginning NodeJS",
+      "duration": 100,
+      "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6bebC_d4eWwJ-x9ntqDuT94TvOgumSBVWHg&s",
+      "id": "YNnAXM6"
+    },
+    {
+      "title": "GraphQL 101",
+      "duration": 120,
+      "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeefbmS16N_Nw0jZSh3aIfVJg7Pz9CLqcnCA&s",
+      "id": "ink6rUU"
     }
   ]
 }

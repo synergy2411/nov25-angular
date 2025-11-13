@@ -1,0 +1,67 @@
+<div class="backdrop">
+  <div class="my-dialog">
+    <h4 class="text-center">Add New Course</h4>
+    <form (ngSubmit)="onSubmit()">
+      <!-- title -->
+      <div class="form-floating mb-3">
+        <input
+          type="text"
+          class="form-control"
+          name="title"
+          id="title"
+          placeholder=""
+          [(ngModel)]="course.title"
+        />
+        <label for="title">Title</label>
+      </div>
+
+      <!-- duration -->
+
+      <div class="form-floating mb-3">
+        <input
+          type="number"
+          class="form-control"
+          name="duration"
+          id="duration"
+          placeholder=""
+          [(ngModel)]="course.duration"
+        />
+        <label for="duration">Duration</label>
+      </div>
+
+      <!-- logo -->
+
+      <div class="form-floating mb-3">
+        <input
+          type="text"
+          class="form-control"
+          name="logo"
+          id="logo"
+          placeholder=""
+          [(ngModel)]="course.logo"
+        />
+        <label for="logo">Logo</label>
+      </div>
+
+      <!-- buttons -->
+      <div class="row">
+        <div class="col">
+          <div class="d-grid">
+            <button class="btn btn-primary" type="submit">Add Course</button>
+          </div>
+        </div>
+        <div class="col">
+          <div class="d-grid">
+            <button
+              class="btn btn-secondary"
+              (click)="router.navigateByUrl('/courses')"
+              type="button"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,5 +1,14 @@
 <div class="text-center">
   <h1 class="mb-3">All Available Courses</h1>
+
+  <div class="row mb-4">
+    <div class="col-4 offset-4">
+      <div class="d-grid">
+        <a routerLink="/courses/add">Add Course</a>
+      </div>
+    </div>
+  </div>
+
   <div class="row">
     <div class="col-4" *ngFor="let course of courseCollection">
       <div class="card clickable" (click)="onCourseSelected(course.id)">

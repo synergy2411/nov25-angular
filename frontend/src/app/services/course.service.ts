@@ -18,7 +18,13 @@ export class CourseService {
     return this.http.get<ICourse>(`${this.baseURL}/${courseId}`);
   }
 
-  create(course: ICourse) {}
+  create(course: ICourse) {
+    return this.http.post<ICourse>(this.baseURL, course, {
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
+  }
 
   deleteById(courseId: string) {
     return this.http.delete(`${this.baseURL}/${courseId}`);
