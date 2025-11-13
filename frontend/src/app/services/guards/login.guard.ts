@@ -7,3 +7,5 @@ export const loginGuard: CanActivateFn = (route, state) => {
 
   return authService.isAuthenticated();
 };
+
+// ng g guard services/gurads/login

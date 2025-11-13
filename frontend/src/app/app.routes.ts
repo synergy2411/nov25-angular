@@ -5,6 +5,7 @@ import { UsersComponent } from './components/users/users.component';
 import { ExpensesComponent } from './components/expenses/expenses.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { loginGuard } from './services/guards/login.guard';
+import { leaveGuard } from './services/guards/leave.guard';
 
 export const APP_ROUTES: Routes = [
   {
@@ -19,6 +20,7 @@ export const APP_ROUTES: Routes = [
   {
     path: 'register', // http://localhost:4200/register
     component: RegisterComponent,
+    canDeactivate: [leaveGuard],
   },
   {
     path: 'users', // http://localhost:4200/users

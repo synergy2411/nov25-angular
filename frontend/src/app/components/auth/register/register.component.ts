@@ -103,4 +103,9 @@ export class RegisterComponent {
     }
     return { mismatched: true };
   }
+
+  // Leave Guard
+  shouldExit() {
+    return confirm('Are you sure to leave this page?');
+  }
 }

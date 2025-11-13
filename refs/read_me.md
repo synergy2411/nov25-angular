@@ -407,7 +407,9 @@ authDomain: "sk-ng-nov-25.firebaseapp.com",
 - RouterOutlet: space to load the component template
 - RouterLink: Prevent page reloading
 - Router Service: programmatic navigation
-- Route Guard: CanActivate - allow / disallow to enter into the route
+- Route Guard:
+  > CanActivate - allow / disallow to enter into the route
+  > CanDeactivate - allow / disallow to leave the route
 
 ## Hashbang Mode
 
