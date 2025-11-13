@@ -6,6 +6,7 @@ import { ExpensesComponent } from './components/expenses/expenses.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { loginGuard } from './services/guards/login.guard';
 import { leaveGuard } from './services/guards/leave.guard';
+import { CoursesComponent } from './components/courses/courses.component';
 
 export const APP_ROUTES: Routes = [
   {
@@ -30,6 +31,10 @@ export const APP_ROUTES: Routes = [
   {
     path: 'expenses', // http://localhost:4200/expense
     component: ExpensesComponent,
+  },
+  {
+    path: 'courses',
+    component: CoursesComponent,
   },
   {
     path: '**', // executes when URL path does not match above mentioned paths

@@ -418,3 +418,14 @@ authDomain: "sk-ng-nov-25.firebaseapp.com",
 ## HTML5 Mode / Regular Mode (default in Angular)
 
 - http://www.example.com/index/first
+
+---
+
+# Courses App
+
+- Course Model - id, title, duration, logo
+- Course Service: Http Call (CRUD)
+- Courses Component : display all the courses title
+- CourseDetail Component: individual course detail
+- CourseForm Component: Add / Edit course
+- Routing

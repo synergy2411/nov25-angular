@@ -31,6 +31,7 @@ import { GlobalErrorHandlerService } from './services/global-error-handler.servi
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { APP_ROUTES } from './app.routes';
 import { MainNavigationComponent } from './components/main-navigation/main-navigation.component';
+import { CoursesComponent } from './components/courses/courses.component';
 
 @NgModule({
   declarations: [
@@ -57,6 +58,7 @@ import { MainNavigationComponent } from './components/main-navigation/main-navig
     ExpenseFormComponent,
     PageNotFoundComponent,
     MainNavigationComponent,
+    CoursesComponent,
   ],
   imports: [
     // Imports module functionality

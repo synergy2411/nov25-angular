@@ -1,0 +1,20 @@
+import { Component, OnInit } from '@angular/core';
+import { ICourse } from '../../model/course-model';
+import { CourseService } from '../../services/course.service';
+
+@Component({
+  selector: 'app-courses',
+  templateUrl: './courses.component.html',
+  styleUrl: './courses.component.css',
+})
+export class CoursesComponent implements OnInit {
+  courseCollection!: ICourse[];
+
+  constructor(private courseService: CourseService) {}
+
+  ngOnInit(): void {
+    this.courseService
+      .fetchAll()
+      .subscribe((allCourses) => (this.courseCollection = allCourses));
+  }
+}
