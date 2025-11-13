@@ -5,6 +5,7 @@ import {
   createUserWithEmailAndPassword,
   getAuth,
   signInWithEmailAndPassword,
+  signOut,
 } from 'firebase/auth';
 
 @Injectable({
@@ -57,5 +58,14 @@ export class AuthService {
 
   getToken() {
     return this.token;
+  }
+
+  userLogout() {
+    return new Promise((resolve) => {
+      signOut(this.auth).then(() => {
+        this.token = '';
+        resolve(true);
+      });
+    });
   }
 }
