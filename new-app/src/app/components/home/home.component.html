@@ -1,0 +1,14 @@
+<h2>Home Component</h2>
+
+<h3>{{ user.firstName }} {{ user.lastName }}</h3>
+
+<input type="text" [(ngModel)]="user.firstName" />
+
+<p>The user is <span *ngIf="!user.isWorking"> NOT </span> working</p>
+
+<hr />
+
+<app-child></app-child>
+
+<!-- AppModule - BrowserModule -->
+<!-- FeatureModule - CommonModule -->

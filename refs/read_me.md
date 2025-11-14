@@ -434,10 +434,15 @@ authDomain: "sk-ng-nov-25.firebaseapp.com",
 
 ---
 
-Lazy Loading
+# Lazy Loading
+
+# Tips / tricks
+
+# Optimization Techniques
+
 Testing
-Tips / tricks
+Standalone Components
+Signals, computed,
+Angular Material
 
-signals, computed,
-
-material
+> ng new new-app
