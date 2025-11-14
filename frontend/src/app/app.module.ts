@@ -34,6 +34,7 @@ import { MainNavigationComponent } from './components/main-navigation/main-navig
 import { CoursesComponent } from './components/courses/courses.component';
 import { CourseDetailComponent } from './components/courses/course-detail/course-detail.component';
 import { CourseFormComponent } from './components/courses/course-form/course-form.component';
+import { EagerModule } from './modules/eager/eager.module';
 
 @NgModule({
   declarations: [
@@ -71,6 +72,7 @@ import { CourseFormComponent } from './components/courses/course-form/course-for
     ReactiveFormsModule,
     HttpClientModule,
     RouterModule.forRoot(APP_ROUTES),
+    EagerModule,
   ],
   providers: [
     UserService,
