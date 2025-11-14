@@ -46,6 +46,7 @@ export const APP_ROUTES: Routes = [
       {
         path: ':courseId/edit',
         component: CourseFormComponent,
+        resolve: { course: courseResolver },
       },
       {
         path: ':courseId', // http://localhost:4200/courses/{courseId}

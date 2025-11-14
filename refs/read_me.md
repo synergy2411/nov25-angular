@@ -411,6 +411,7 @@ authDomain: "sk-ng-nov-25.firebaseapp.com",
   > CanActivate - allow / disallow to enter into the route
   > CanDeactivate - allow / disallow to leave the route
 - Resolver: pre-populate data in the route
+- ActivatedRoute Service : access the current URL
 
 ## Hashbang Mode
 
@@ -430,3 +431,13 @@ authDomain: "sk-ng-nov-25.firebaseapp.com",
 - CourseDetail Component: individual course detail
 - CourseForm Component: Add / Edit course
 - Routing
+
+---
+
+Lazy Loading
+Testing
+Tips / tricks
+
+signals, computed,
+
+material
