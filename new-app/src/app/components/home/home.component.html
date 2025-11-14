@@ -1,3 +1,9 @@
+<h1>X Signal : {{ x() }}</h1>
+<h1>Y Signal : {{ y() }}</h1>
+<h1>Z Computed Signal : {{ z() }}</h1>
+
+<button (click)="increaseX()">Increase X</button>
+
 <h2>Home Component</h2>
 
 <h3>{{ user.firstName }} {{ user.lastName }}</h3>
@@ -9,6 +15,12 @@
 <hr />
 
 <app-child></app-child>
+
+<h1>Username : {{ username() }}</h1>
+
+<input type="text" (input)="onChange(input.value)" #input />
+
+<button mat-button color="primary">Primary</button>
 
 <!-- AppModule - BrowserModule -->
 <!-- FeatureModule - CommonModule -->

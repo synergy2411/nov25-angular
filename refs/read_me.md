@@ -440,9 +440,15 @@ authDomain: "sk-ng-nov-25.firebaseapp.com",
 
 # Optimization Techniques
 
-Testing
-Standalone Components
-Signals, computed,
-Angular Material
+# Testing
+
+# Standalone Components
+
+# Signals, computed, effects
+
+# Angular Material
 
 > ng new new-app
+> npm run test
+> ng test --code-coverage
+> ng build
